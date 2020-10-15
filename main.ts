@@ -1,5 +1,5 @@
 basic.forever(function () {
-    if (input.compassHeading() >= 270 && input.compassHeading() <= 360) {
+    if (input.compassHeading() >= 260 && input.compassHeading() <= 300) {
         basic.showString("Bus")
         basic.showLeds(`
             . . . . .
@@ -10,69 +10,13 @@ basic.forever(function () {
             `)
         basic.pause(500)
         basic.clearScreen()
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            # . . . .
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            # . . . .
-            # # . . .
-            # . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            # . . . .
-            . # . . .
-            # # # . .
-            . # . . .
-            # . . . .
-            `)
-        basic.showLeds(`
-            . # . . .
-            . . # . .
-            # # # # .
-            . . # . .
-            . # . . .
-            `)
-        basic.showLeds(`
+        images.createImage(`
             . . # . .
             . . . # .
             # # # # #
             . . . # .
             . . # . .
-            `)
-        basic.showLeds(`
-            . . . # .
-            . . . . #
-            . # # # #
-            . . . . #
-            . . . # .
-            `)
-        basic.showLeds(`
-            . . . . #
-            . . . . .
-            . . # # #
-            . . . . .
-            . . . . #
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . # #
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . #
-            . . . . .
-            . . . . .
-            `)
+            `).scrollImage(-1, 500)
         basic.clearScreen()
     }
 })
